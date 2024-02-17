@@ -1,6 +1,6 @@
 # Project Name
 
-Description of your project.
+To-Do-List
 
 ## Table of Contents
 
@@ -21,8 +21,11 @@ Description of your project.
 
    ```bash
    npm install
-# Project Name
-To-Do-List
+# Usage
+1. Sign-up with username and password.
+2. Login using username and password used when sign-up.
+3. Create/Update/Delete tasks.
+4. Mark as completed if a task is accomplished successfully.
 
 # Features 
 User sign-up and Login
