@@ -4,7 +4,7 @@ const { generateToken } = require('../utils/token');
 exports.findAll = (req, res) => {
     Users.find({})
         .then((data) => { res.status(200).send(data) })
-        .catch(e => { res.status(400).send(e) });
+        .catch(e => { res.status(400).send(e.message) });
 }
 
 exports.login = (req, res) => {
@@ -45,8 +45,7 @@ exports.create = (req, res) => {
                 throw new Error("Username already exists")
             }
 
-            const token = generateToken(payload);
-
+            // return data to next execution or next then method
             return User.save(User)
         })
         .then(data => res.status(201).send(data))
